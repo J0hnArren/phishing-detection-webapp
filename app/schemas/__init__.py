@@ -1,2 +1,2 @@
 from .health import Status
-from .predict import MultipleTitanicInputs, PredictionResults
+from .predict import MultiplePhishingDetectionInputs, PredictionResults
