@@ -1,6 +1,6 @@
 # Phishing detection webapp
 The application is built using FastAPI framework. 
-It has been uploaded to Heroku service and is available via the link: https://phishing_detectionwebapp.herokuapp.com/.
+~~It has been uploaded to Heroku service and is available via the link: https://phishing_detectionwebapp.herokuapp.com/.~~
 
 ## How to run the app
 The app can be run locally via the [Tox](https://pypi.org/project/tox/) tool. In order to run the app 

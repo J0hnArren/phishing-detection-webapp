@@ -6,6 +6,7 @@ import random
 
 import json
 
+
 def test_make_prediction(client: TestClient, test_data: pd.DataFrame) -> None:
     # Given
     payload = {
@@ -18,7 +19,6 @@ def test_make_prediction(client: TestClient, test_data: pd.DataFrame) -> None:
         "http://localhost:8001/api/v1/predict",
         json=payload,
     )
-
 
     print(payload)
 
