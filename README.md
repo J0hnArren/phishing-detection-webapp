@@ -1,7 +1,6 @@
 # Phishing detection webapp
 
 The application is built using FastAPI framework.
-It has been uploaded to Heroku service and is available via the link: https://phishing_detectionwebapp.herokuapp.com/.
 
 ## How to run the app
 
