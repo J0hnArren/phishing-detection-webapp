@@ -26,7 +26,7 @@ def test_make_prediction(client: TestClient, test_data: pd.DataFrame) -> None:
     assert response.status_code == 200
     prediction_data = response.json()
     print(prediction_data)
-    assert all(isinstance(x, int) for x in prediction_data["preds"])
-    assert all((x == 1 or x == 0) for x in prediction_data["preds"])
+    assert all(isinstance(x, str) for x in prediction_data["preds"])
+    assert all((x == 'good' or x == 'bad') for x in prediction_data["preds"])
     assert (np.array(prediction_data["probs"]) >= 0).all() and (np.array(prediction_data["probs"]) <= 1).all()
     assert prediction_data["errors"] is None

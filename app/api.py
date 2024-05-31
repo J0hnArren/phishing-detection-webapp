@@ -6,8 +6,8 @@ import pandas as pd
 from fastapi import APIRouter, HTTPException
 from fastapi.encoders import jsonable_encoder
 from loguru import logger
-from titanic_model import __version__ as model_version
-from titanic_model.predict import make_prediction
+from phishing_detection_model import __version__ as model_version
+from phishing_detection_model.predict import make_prediction
 
 from app import __version__, schemas
 from app.config import settings
@@ -28,9 +28,9 @@ def health() -> dict:
 
 
 @api_router.post("/predict", response_model=schemas.PredictionResults, status_code=200)
-async def predict(input_data: schemas.MultipleTitanicInputs) -> Any:
+async def predict(input_data: schemas.MultiplePhishingDetectionInputs) -> Any:
     """
-    Make predictions on the survival probability of the Titanic passengers
+    Make predictions if the given URL is phishing or not
     """
 
     input_df = pd.DataFrame(jsonable_encoder(input_data.inputs))
